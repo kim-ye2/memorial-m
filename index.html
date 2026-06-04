@@ -4,59 +4,43 @@
 <head>
     <meta charset="utf-8">
     <link href="/favicon.ico" rel="icon">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>삼육서울병원 추모관 - 모바일</title>
+
+    <!-- ✅ 모바일 필수: viewport 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>삼육서울병원 추모관</title>
     <meta content="삼육서울병원 추모관" name="keywords" />
     <meta content="website" property="og:type">
-    <meta content="template" property="og:url">
-    <meta content="yes" name="apple-mobile-web-app-capable">
+
+    <!-- ✅ iOS 웹앱 관련 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="추모관">
+
+    <!-- ✅ 전화번호 자동 링크 방지 (필요 시 제거) -->
+    <meta name="format-detection" content="telephone=no">
+
     <!-- css -->
-    <link rel="stylesheet" crossorigin="" href="css/default.css">
+    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- jq -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         $(function () {
-            function bindPcNavHover() {
-                const isPc = $(window).width() >= 1400;
-
-                if (isPc) {
-                    $('.nav_1depth')
-                    .off('.pcNav') // 중복 바인딩 방지
-                    .on('mouseenter.pcNav', function () {
-                        $(this).children('.nav_2depth').stop(true, true).slideDown(200);
-                    })
-                    .on('mouseleave.pcNav', function () {
-                        $(this).children('.nav_2depth').stop(true, true).slideUp(200);
-                    });
-                } else {
-                    $('.nav_1depth').off('.pcNav');
-                    $('.nav_2depth').removeAttr('style'); // 열려있던 메뉴 초기화
-                }
-            }
-
-            // 최초 실행
-            bindPcNavHover();
-
-            // 화면 크기 변경 시 다시 적용
-            $(window).on('resize', bindPcNavHover);
-
             $('body').removeClass('no-scroll');
+
+            // 모바일 nav 토글
             $('.nav_open').click(function () {
                 $(this).toggleClass('active');
                 $('nav > ul').toggleClass('open');
@@ -67,7 +51,6 @@
                     $('body').removeClass('no-scroll');
                 }
             });
-
         });
     </script>
 </head>
@@ -78,7 +61,7 @@
             <div class="adm_login_wrap">
                 <div class="login_form">
                     <h1 class="logo">
-                        <a href="index.html"><img src="images/logo.svg" alt=""></a>
+                        <a href="index.html"><img src="images/logo.svg" alt="삼육서울병원 추모관"></a>
                     </h1>
                     <h2>ADMINISTRATOR LOGIN</h2>
                     <div class="login_box">
@@ -95,8 +78,4 @@
     </div>
 </body>
 
-
 </html>
-
-<script>
-</script>
