@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <link href="/favicon.ico" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>지난행사정보 - 삼육서울병원 추모관</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="추모관">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('.search_toggle').on('click', function () {
+                var $panel = $('.search_panel');
+                $(this).toggleClass('open');
+                if ($panel.is(':visible')) {
+                    $panel.slideUp(200);
+                } else {
+                    $panel.css('display', 'flex').hide().slideDown(200);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- 헤더 -->
+        <header class="main_header">
+            <h1><img src="image/logo.png" alt="삼육서울병원 추모관"></h1>
+        </header>
+
+        <!-- 탭 메뉴 -->
+        <div class="tab_wrap">
+            <a href="current.html">빈소현황</a>
+            <a href="closed.html" class="active">지난행사정보</a>
+        </div>
+
+        <!-- 콘텐츠 -->
+        <div class="page_cont">
+
+            <!-- 조회기간 토글 -->
+            <div class="search_box">
+                <button type="button" class="search_toggle">
+                    <span>조회기간</span>
+                    <svg class="ico_arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="search_panel">
+                    <input type="text" placeholder="고인명을 입력해주세요.">
+                    <div class="date_row">
+                        <input type="date" placeholder="시작일">
+                        <span>~</span>
+                        <input type="date" placeholder="종료일">
+                        <button type="button" class="search_btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <circle cx="11" cy="11" r="7" stroke="#555" stroke-width="1.8"/>
+                                <path d="M16.5 16.5L21 21" stroke="#555" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 지난행사 리스트 -->
+            <ul class="past_list">
+
+                <li>
+                    <div class="past_top">
+                        <div class="past_photo"><img src="image/deceased.png" alt="고인 사진"></div>
+                        <div class="past_info">
+                            <div class="past_info_row">
+                                <span class="past_room">8호</span>
+                                <em class="past_tag">삼육리더스</em>
+                            </div>
+                            <p class="past_name">故 김상용 <span>남, 66세</span></p>
+                            <p class="past_chief">상주 &nbsp;이경숙</p>
+                        </div>
+                    </div>
+                    <ul class="past_dates">
+                        <li><span>입실</span><b>2025-11-21 09:00</b></li>
+                        <li><span>입관</span><b>2025-11-21 17:00</b></li>
+                        <li><span>입실</span><b>2025-11-22 11:45</b></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="past_top">
+                        <div class="past_photo"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+                        <div class="past_info">
+                            <div class="past_info_row">
+                                <span class="past_room">8호</span>
+                                <em class="past_tag">삼육리더스</em>
+                            </div>
+                            <p class="past_name">故 김상용 <span>남, 66세</span></p>
+                            <p class="past_chief">상주 &nbsp;이경숙</p>
+                        </div>
+                    </div>
+                    <ul class="past_dates">
+                        <li><span>입실</span><b>2025-11-21 09:00</b></li>
+                        <li><span>입관</span><b>2025-11-21 17:00</b></li>
+                        <li><span>입실</span><b>2025-11-22 11:45</b></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="past_top">
+                        <div class="past_photo"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+                        <div class="past_info">
+                            <div class="past_info_row">
+                                <span class="past_room">8호</span>
+                                <em class="past_tag">삼육리더스</em>
+                            </div>
+                            <p class="past_name">故 김상용 <span>남, 66세</span></p>
+                            <p class="past_chief">상주 &nbsp;이경숙</p>
+                        </div>
+                    </div>
+                    <ul class="past_dates">
+                        <li><span>입실</span><b>2025-11-21 09:00</b></li>
+                        <li><span>입관</span><b>2025-11-21 17:00</b></li>
+                        <li><span>입실</span><b>2025-11-22 11:45</b></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="past_top">
+                        <div class="past_photo"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+                        <div class="past_info">
+                            <div class="past_info_row">
+                                <span class="past_room">8호</span>
+                                <em class="past_tag">삼육리더스</em>
+                            </div>
+                            <p class="past_name">故 김상용 <span>남, 66세</span></p>
+                            <p class="past_chief">상주 &nbsp;이경숙</p>
+                        </div>
+                    </div>
+                    <ul class="past_dates">
+                        <li><span>입실</span><b>2025-11-21 09:00</b></li>
+                        <li><span>입관</span><b>2025-11-21 17:00</b></li>
+                        <li><span>입실</span><b>2025-11-22 11:45</b></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div><!-- /page_cont -->
+    </div><!-- /wrap -->
+</body>
+</html>

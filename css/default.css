@@ -113,7 +113,7 @@ button, a, input[type="submit"], input[type="button"] {
 /* =============================================
    날짜 입력 커스텀 (모바일)
    ============================================= */
-input[type="date"]::-webkit-calendar-picker-indicator {
+/* input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     display: none;
 }
@@ -128,7 +128,7 @@ input[type=date] {
     background-size: 14px;
     min-width: 120px;
     padding-right: 40px !important;
-}
+} */
 
 select {
     -webkit-appearance: none;

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <link href="/favicon.ico" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>빈소현황 - 삼육서울병원 추모관</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="추모관">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 아코디언 드롭다운
+            $('.accordion > button').on('click', function () {
+                const $panel = $(this).next('.acc_panel');
+                const isOpen = $panel.is(':visible');
+                $panel.slideToggle(200);
+                $(this).toggleClass('open', !isOpen);
+            });
+
+            // URL 복사
+            $('.copy_btn').on('click', function () {
+                navigator.clipboard.writeText(location.href).then(function () {
+                    alert('URL이 복사되었습니다.');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- 헤더 -->
+        <header class="main_header">
+            <h1><img src="image/logo.png" alt="삼육서울병원 추모관"></h1>
+        </header>
+
+        <!-- 탭 메뉴 -->
+        <div class="tab_wrap">
+            <a href="current.html" class="active">빈소현황</a>
+            <a href="closed.html">마감행사내역</a>
+        </div>
+
+        <!-- 콘텐츠 -->
+        <div class="page_cont">
+
+            <!-- 고인 기본 카드 -->
+            <div class="deceased_card">
+                <div class="deceased_card_top">
+                    <div class="deceased_photo">
+                        <img src="image/deceased.png" alt="고인 사진">
+                    </div>
+                    <div class="deceased_info">
+                        <div>
+                            <p class="deceased_name"><b>故 김상용</b> <span>평산</span></p>
+                            <em class="room_no">3호</em>
+                        </div>
+                        <p class="deceased_sub">82세 / 여자</p>
+                    </div>
+                </div>
+                <ul class="deceased_meta">
+                    <li><b>종교</b><span>일반</span></li>
+                    <li><b>상주정보</b><span>김정봉 010-1234-5678</span></li>
+                    <li><b>상조회사</b><span>프리드 / 한아름 010-1234-5678</span></li>
+                </ul>
+            </div>
+
+            <!-- 진행상황 타임라인 -->
+            <div class="timeline_card">
+                <div class="timeline_steps">
+                    <div class="step">
+                        <p>3월 19일</p>
+                        <p>05:51</p>
+                        <span>접수</span>
+                    </div>
+                    <div class="step">
+                        <p>3월 19일</p>
+                        <p>05:51</p>
+                        <span>입관</span>
+                    </div>
+                    <div class="step">
+                        <p>3월 19일</p>
+                        <p>05:51</p>
+                        <span>발인</span>
+                    </div>
+                </div>
+                <div class="timeline_bar">
+                    <div class="timeline_progress" style="width: 50%;"></div>
+                    <div class="timeline_dot" style="left: 50%;"></div>
+                </div>
+            </div>
+
+            <!-- 아코디언: 상주정보 -->
+            <div class="accordion">
+                <button type="button">
+                    <span>상주정보</span>
+                    <svg class="ico_arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="acc_panel">
+                    <ul class="acc_table">
+                        <li><b>아들</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                        <li><b>딸</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                        <li><b>며느리</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                        <li><b>사위</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                        <li><b>손자녀</b><span>홍길동, 홍길동, 홍길동, 홍길동, 홍길동, 홍길동, 홍길동, 홍길동, 홍길동, 홍길동, 홍길동,</span></li>
+                        <li><b>외손주</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                        <li><b>손부</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                        <li><b>손서</b><span>홍길동, 홍길동, 홍길동 홍길동,</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 아코디언: 상세정보 -->
+            <div class="accordion">
+                <button type="button">
+                    <span>상세정보</span>
+                    <svg class="ico_arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="acc_panel">
+                    <ul class="acc_table">
+                        <li><b>1차 장지</b><span>홍성추모공원 (00:00)</span></li>
+                        <li><b>2차 장지</b><span>-</span></li>
+                        <li><b>버스</b><span>테스트 버스</span></li>
+                        <li><b>리무진</b><span>테스트 리무진</span></li>
+                        <li><b>제단</b><span>제단</span></li>
+                        <li><b>수의</b><span>테스트 수의</span></li>
+                        <li><b>관</b><span>-</span></li>
+                        <li><b>진단서</b><span>O</span></li>
+                        <li><b>계산서</b><span>-</span></li>
+                        <li><b>삼아지역</b><span>경기도</span></li>
+                        <li><b>사망장소</b><span>외</span></li>
+                        <li><b>출동연락</b><span>-</span></li>
+                        <li><b>이송담당</b><span>-</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 아코디언: 비고 -->
+            <div class="accordion">
+                <button type="button">
+                    <span>비고</span>
+                    <svg class="ico_arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="acc_panel">
+                    <p class="acc_text">부고-상조회 자체<br>영상송출 - 3만원</p>
+                </div>
+            </div>
+
+            <!-- 모바일부고 -->
+            <div class="obituary_bar">
+                <span>모바일부고</span>
+                <button type="button" class="copy_btn">URL 복사하기</button>
+            </div>
+
+        </div><!-- /page_cont -->
+    </div><!-- /wrap -->
+</body>
+</html>
